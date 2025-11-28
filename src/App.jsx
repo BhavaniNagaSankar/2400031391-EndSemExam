@@ -1,63 +1,40 @@
-import { useState } from 'react'
-
-import reactLogo from './assets/react.svg'
-
-import viteLogo from '/vite.svg'
-
-import './App.css'
-
-
+import "./App.css";
 
 function App() {
-
-  const [count, setCount] = useState(0)
-
-
+  const gitCommands = [
+    "git init",
+    "git remote add origin <URL>",
+    "git add .",
+    "git commit -m \"Initial commit\"",
+    "git push -u origin main",
+    "git clone <URL>",
+  ];
 
   return (
+    <div className="container">
 
-    <>
+      <header className="header">
+        <h1>Git Command Summary</h1>
+        <p className="subtitle">
+          ATHUMRI BHAVANI NAGA SANKAR • ID: 2400031391 • S-106
+        </p>
+      </header>
 
-            <header>
+      <section className="card">
+        <h2>Commands Used in the Project</h2>
+        <ul className="command-list">
+          {gitCommands.map((cmd, index) => (
+            <li key={index}>{cmd}</li>
+          ))}
+        </ul>
+      </section>
 
-          <nav>
+      <footer className="footer">
+        © 2025 • Student Feedback Form Project • All Rights Reserved
+      </footer>
 
-            <div className='logo'>My Website</div>
-
-            <ul id="navlist">
-
-              <li>Home</li>
-
-              <li>About</li>
-
-              <li>Services</li>
-
-              <li>Contact</li>
-
-            </ul>
-
-            <div className='menu' onClick={()=>this.menuClick()}>&#9776;</div>
-
-          </nav>
-
-        </header>
-
-        <section>
-
-          <h1>Welcome to My Responsive Website</h1>
-
-          <p>This design adopts that various screen sizes</p>
-
-        </section>
-
-        <footer>Copyright @ 2025. All rights reserved.</footer>
-
-    </>
-
-  )
-
+    </div>
+  );
 }
 
-
-
-export default App
+export default App;

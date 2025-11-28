@@ -1,77 +1,74 @@
-header{
-    height: 50px;
-    background: linear-gradient(90deg, red 0%, blue 100%);
-    color: white;
-    line-height: 50px;
+/* Modern clean layout */
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-footer{
-    height: 30px;
-    line-height: 30px;
-    font-size: 8pt;
-    color: white;
-    background: linear-gradient(90deg, red 0%, blue 100%);
-    text-align: center;
+/* Layout container */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-section{
-    height: calc(100% - 80px);
-    overflow: auto;
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
 }
 
-nav .logo{
-    font-size: 20pt;
-    font-weight: bold;
-    margin-left: 15px;
+.subtitle {
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+/* Card section */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 14px;
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
-nav ul li{
-    margin: 0 15px;
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 22px;
 }
 
-nav .menu{
-    margin-right: 15px;
-    font-size: 20pt;
-    display: none;
+/* Command list */
+.command-list {
+  list-style: none;
+  padding: 0;
 }
 
+.command-list li {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 12px;
+  margin: 8px 0;
+  border-left: 4px solid #00d4ff;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+}
 
-@media(max-width: 768px){
-    nav .menu{
-        display: block;
-    }
-    nav ul{
-        display: none;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        background: white;
-        width: 100%;
-    }
-    nav ul.active{
-        display: block;
-    }
-    nav ul li{
-        background: linear-gradient(90deg, blue 0%, purple 100%);
-        padding: 0;
-        margin: 2px 0 0 0;
-    }
-
-    body{
-        background-color: rgb(191, 110, 110);
-    }
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+  opacity: 0.8;
+  font-size: 13px;
 }
